@@ -1,0 +1,93 @@
+{
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "seed": 42,
+  "batch_size": 256,
+  "ddpm_steps": 400,
+  "param_counts": {
+    "MLP Classifier": 218058,
+    "Vanilla AE": 435536,
+    "Sparse AE": 435536,
+    "VAE": 1116560,
+    "Vanilla GAN": 1083921,
+    "Vanilla GAN (G)": 550416,
+    "DCGAN": 2049856,
+    "DCGAN (G)": 1911232,
+    "DDPM": 1943105
+  },
+  "mlp_classifier": {
+    "test_accuracy_pct": 88.84,
+    "epoch_time_s": 1.229,
+    "orthogonality": {
+      "W1": {
+        "shape": [
+          256,
+          784
+        ],
+        "fro_WTW_minus_I": 487.348,
+        "fro_WWT_minus_I": 486.806
+      },
+      "W2": {
+        "shape": [
+          64,
+          256
+        ],
+        "fro_WTW_minus_I": 65.842,
+        "fro_WWT_minus_I": 64.367
+      },
+      "W3": {
+        "shape": [
+          10,
+          64
+        ],
+        "fro_WTW_minus_I": 11.697,
+        "fro_WWT_minus_I": 9.101
+      }
+    },
+    "frozen_decoder": {
+      "test_mse": 0.017298,
+      "test_psnr": 18.37,
+      "test_ssim": 0.706
+    }
+  },
+  "epoch_times_s": {
+    "Vanilla AE": 1.518,
+    "Sparse AE": 1.574,
+    "VAE": 1.809,
+    "Vanilla GAN": 2.373,
+    "DCGAN": 12.916,
+    "DDPM": 30.156
+  },
+  "latency_ms_batch64": {
+    "Vanilla AE": 0.475,
+    "Sparse AE": 0.478,
+    "VAE": 0.495,
+    "Vanilla GAN": 0.493,
+    "DCGAN": 3.057,
+    "DDPM": 3262.14
+  },
+  "reconstruction": {
+    "Vanilla AE": {
+      "test_mse": 0.007443,
+      "test_psnr": 22.33,
+      "test_ssim": 0.8383
+    },
+    "Sparse AE": {
+      "test_mse": 0.00907,
+      "test_psnr": 21.42,
+      "test_ssim": 0.8048
+    },
+    "VAE": {
+      "test_mse": 0.014239,
+      "test_psnr": 19.36,
+      "test_ssim": 0.7557
+    }
+  },
+  "sparse_ae_final_sparsity_pct": 39.4,
+  "fid_scores": {
+    "VAE": 81.16,
+    "Vanilla GAN": 170.17,
+    "DCGAN": 36.54,
+    "DDPM": 37.35
+  }
+}
